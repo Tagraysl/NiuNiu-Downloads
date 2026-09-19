@@ -1,0 +1,5 @@
+file 'carousel-1.png'
+duration 2.5
+file 'carousel-2.png'
+duration 2.5
+file 'carousel-1.png'

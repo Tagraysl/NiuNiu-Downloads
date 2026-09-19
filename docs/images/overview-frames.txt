@@ -1,0 +1,5 @@
+file 'hardware-en.png'
+duration 3
+file 'processes-en.png'
+duration 3
+file 'hardware-en.png'

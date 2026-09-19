@@ -1,5 +1,23 @@
 # 验证范围 / Validation scope
 
+## Windows 1.5.2
+
+2026-09-19: 540 checks passed / 共 540 项检查通过。
+
+| Scope / 范围 | Passed / 通过 |
+|---|---|
+| Usage colors, thresholds, notification preferences and UI / 配色、阈值、通知开关与界面 | 99/99 |
+| Startup, sorting and default headers / 自启、排序和默认表头 | 51/51 |
+| Language and data directory / 语言与数据目录 | 32/32 |
+| Existing regression / 既有功能回归 | 356/356 |
+| Native notification request and shown event / 实际系统通知请求与显示事件 | 2/2 |
+
+Checked Chinese/English, light/dark rendering, three modes, 13/18-point module settings, contrast across eight palettes, threshold hysteresis, alert cooldown and settings save/cancel. Windows reported the explicitly labelled test notification as shown. The user reviewed and accepted the candidate.
+已检查中英文、明暗主题、三种模式、13/18 号模块设置、八种配色对比度、温度恢复逻辑、通知间隔及保存/取消。Windows 确认测试通知显示，用户已查看并确认候选版。
+
+No hardware overheating was induced. Reboot/logon startup, elevated sensor acquisition, native pointer/taskbar hover scenarios and installation/uninstallation were not repeated for 1.5.2. macOS remains the unchanged, untested-on-Mac preview.
+未人为加热硬件。本版未重做重启/登录自启、管理员传感器、原生鼠标/任务栏悬停及安装/卸载实测。macOS 保持原预览版，尚未 Mac 实机验证。
+
 ## Windows 1.5.0
 
 | Check / 检查 | Result / 结果 |

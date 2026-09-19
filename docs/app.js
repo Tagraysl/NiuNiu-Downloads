@@ -14,10 +14,10 @@
   function applyLanguage() {
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
     document.querySelectorAll('[data-zh][data-en]').forEach(el => { el.innerHTML = el.dataset[language]; });
-    document.title = language === 'zh' ? '牛牛 NiuNiu · 看清电脑状态' : 'NiuNiu · Your computer, at a glance';
+    document.title = language === 'zh' ? '牛牛 NiuNiu · 电脑状态与占用监控' : 'NiuNiu · Hardware & process monitoring';
     document.querySelector('meta[name="description"]').content = language === 'zh'
-      ? '牛牛 NiuNiu：简洁的 Windows 硬件与进程监控。完整、紧凑、任务栏三种模式，自定义布局与中英文界面。下载 Windows 版与 macOS 预览版。'
-      : 'NiuNiu: a clean Windows hardware and process monitor with full, compact and taskbar modes, custom layouts and bilingual UI. Download Windows or the macOS preview.';
+      ? '牛牛 NiuNiu：Windows 电脑状态与占用监控。查找高占用程序、查看硬件温度，在紧凑面板或任务栏持续看状态，并按需开启温度提醒。'
+      : 'NiuNiu helps you find busy apps, watch hardware temperatures and keep useful readings in a compact panel or the Windows taskbar, with optional temperature alerts.';
     toggle.textContent = language === 'zh' ? 'English' : '中文';
     toggle.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换为中文');
     document.getElementById('full-guide').href = 'https://github.com/Tagraysl/NiuNiu-Downloads/blob/main/README.' + (language === 'zh' ? 'zh-CN' : 'en') + '.md';

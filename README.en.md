@@ -1,10 +1,18 @@
 # NiuNiu — full feature guide
 
+## New in Windows 1.5.2
+
+- Optional start with Windows, A–Z/Z–A process sorting, and readable initial column headers.
+- Ten hardware-usage color bands from green through blue to red in all three modes, adapted to light and dark themes.
+- Adjustable per-device temperature limits in module ⋯ settings, shared by all modes. Defaults: CPU 85°C, GPU core 80°C, drives 60°C. Red at the limit; normal again 2°C below it.
+- Optional Windows temperature notifications in General settings, off by default, with a test button. One alert per overheating episode, at least five minutes apart per device. Windows notification and Do Not Disturb settings apply.
+- Fully quit the old version before updating. Reuse the installation and data folders to retain settings.
+
 [简体中文](README.zh-CN.md) · [Visual overview](README.md) · [Downloads](https://github.com/Tagraysl/NiuNiu-Downloads/releases)
 
 NiuNiu is a desktop monitoring tool with rounded cards, consistent spacing and alignment, and a choice of a detailed dashboard, compact panel or actual Windows taskbar display. Its interface supports Simplified Chinese and English.
 
-This guide describes **Windows 1.5.0**. The independent macOS 0.1.0 preview has not been tested on a Mac and does not yet match the Windows feature set.
+This guide describes **Windows 1.5.2**. The independent macOS 0.1.0 preview has not been tested on a Mac and does not yet match the Windows feature set.
 
 ## 1. Hardware and processes
 

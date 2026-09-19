@@ -1,15 +1,34 @@
 <div align="center">
+
   <img src="docs/images/icon.png" width="88" alt="NiuNiu icon" />
-  <h1>牛牛 · NiuNiu</h1>
-  <p>看清电脑状态，让监控融入桌面。<br/>A clear view of your computer, from a full dashboard to the Windows taskbar.</p>
+  <h1>牛牛 · 电脑状态与占用监控</h1>
+  <p>电脑卡顿时查高占用程序，长任务时看负载与温度；用紧凑面板或任务栏持续看状态，按需接收温度提醒。<br/>Find busy apps, watch load and temperatures, and keep readings in a compact panel or taskbar with optional alerts.</p>
   <p><a href="https://tagraysl.github.io/NiuNiu-Downloads/">下载网站 / Website</a> · <a href="README.zh-CN.md">完整中文介绍</a> · <a href="README.en.md">Full English guide</a> · <a href="https://github.com/Tagraysl/NiuNiu-Downloads/releases">GitHub Downloads</a></p>
 </div>
+
+## Windows 1.5.2 新功能
+
+- 可选开机自启；占用页支持名称 A–Z/Z–A 排序；默认表头完整显示。
+- 三种模式的硬件占用率每 10% 一档，绿 → 蓝 → 红，适配浅色与深色主题。
+- 硬件模块“⋯”中的温度预警值可单独修改，三种模式共用。CPU 默认 85°C、GPU 核心 80°C、硬盘 60°C；达到阈值变红，降至阈值以下 2°C 恢复。
+- 通用设置可开启 Windows 温度通知，默认关闭，并提供测试通知按钮。每次超温提醒一次，同一硬件至少间隔 5 分钟；Windows 勿扰及通知设置会影响显示。
+- 更新前先完全退出旧版，沿用原程序及数据目录可保留配置。
+
+## New in Windows 1.5.2
+
+- Optional start with Windows, A–Z/Z–A process sorting, and readable initial column headers.
+- Ten hardware-usage color bands from green through blue to red in all three modes, adapted to light and dark themes.
+- Adjustable per-device temperature limits in module ⋯ settings, shared by all modes. Defaults: CPU 85°C, GPU core 80°C, drives 60°C. Red at the limit; normal again 2°C below it.
+- Optional Windows temperature notifications in General settings, off by default, with a test button. One alert per overheating episode, at least five minutes apart per device. Windows notification and Do Not Disturb settings apply.
+- Fully quit the old version before updating. Reuse the installation and data folders to retain settings.
+
+
 
 ## 下载 / Downloads
 
 | 平台 / Platform | 版本 / Version | 下载 / Download |
 |---|---|---|
-| Windows x64 | **1.5.0**，当前主要版本 / primary release | [EXE 安装包 / Installer](https://github.com/Tagraysl/NiuNiu-Downloads/releases/tag/v1.5.0) |
+| Windows x64 | **1.5.2**，当前主要版本 / primary release | [EXE 安装包 / Installer](https://github.com/Tagraysl/NiuNiu-Downloads/releases/tag/v1.5.2) |
 | macOS · Apple Silicon | **0.1.0 预览 / preview** | [ARM64 .app ZIP](https://github.com/Tagraysl/NiuNiu-Downloads/releases/tag/v0.1.0-macos-preview) |
 | macOS · Intel | **0.1.0 预览 / preview** | [x64 .app ZIP](https://github.com/Tagraysl/NiuNiu-Downloads/releases/tag/v0.1.0-macos-preview) |
 
@@ -43,7 +62,7 @@
 | 语言 / Language | 简体中文 / English 即时切换，覆盖菜单、设置、曲线及提示 | Instant Simplified Chinese / English switching across menus, settings, charts and messages |
 | 安装和数据 / Installation & data | EXE 内置运行环境，安装和数据目录可选；升级保留设置，卸载保留数据 | Self-contained EXE installer, selectable app/data locations, settings migration and data-preserving uninstall |
 
-以上功能表描述 **Windows 1.5.0**；Mac 的范围见 [中文说明](platforms/macos/说明.md) / [Mac preview guide](platforms/macos/README.en.md)。
+以上功能表描述 **Windows 1.5.2**；Mac 的范围见 [中文说明](platforms/macos/说明.md) / [Mac preview guide](platforms/macos/README.en.md)。
 
 ## DIY 与外观 / Layout & appearance
 
@@ -65,7 +84,7 @@
 
 - 单位使用十进制 B / KB / MB / GB 和 KB/s / MB/s。网卡占用相对于链路速率；读写速率包含文件、网络和设备 I/O，与网络流量分开。<br/>Units use decimal B / KB / MB / GB and KB/s / MB/s. Adapter utilization is relative to link speed. I/O includes file, network and device activity and is distinct from network traffic.
 - 公网资料会查询 Ping0，默认启动时查询、之后每 10 分钟更新，可关闭或调整；本地网卡采样独立。高级资料需要自己的密钥，Windows 使用当前用户加密保存。<br/>Public-IP lookup contacts Ping0 at startup and every 10 minutes by default; it can be disabled or adjusted independently of adapter sampling. Advanced fields require your own API key, encrypted for the current Windows user.
-- 仓库不包含个人配置、密钥、诊断日志或本机网络报告。Windows 356 项既有回归、32 项语言/数据检查和 13 项安装检查通过；Mac 只有跨平台逻辑、Windows 渲染器和打包检查，尚无 Mac 实测。<br/>No personal settings, keys, diagnostic logs or local network reports are included. Windows passed 356 existing regression checks, 32 language/data checks and 13 installer checks. Mac validation covers shared logic, the renderer on Windows and package structure, not actual Mac execution.
+- 仓库不包含个人配置、密钥、诊断日志或本机网络报告。Windows 1.5.2 共 540 项检查通过，包含 356 项既有回归及实际 Windows 通知显示检查；本版未重做安装/卸载检查；Mac 只有跨平台逻辑、Windows 渲染器和打包检查，尚无 Mac 实测。<br/>No personal settings, keys, diagnostic logs or local network reports are included. Windows 1.5.2 passed 540 checks, including 356 existing regression checks and an actual Windows notification display check. Installation/uninstallation checks were not repeated for this version. Mac validation covers shared logic, the renderer on Windows and package structure, not actual Mac execution.
 
 详见 [验证范围 / Validation scope](docs/VALIDATION.md)、[第三方许可 / Third-party notices](THIRD-PARTY-NOTICES.md)。
 

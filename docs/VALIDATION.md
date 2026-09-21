@@ -1,3 +1,18 @@
+# Windows 1.5.6 · 验证记录 / Validation
+
+2026-09-21：用户已人工确认候选安装包并批准发布。
+
+- 完整模式响应式布局与参数：114 项；720–6000 逻辑像素，中英文与两档字号。
+- 参数适用性及旧配置兼容：291 项；真实窗口滚动与保存/取消交互：16 项。
+- 综合回归：356 项；温度提醒 99 项，自启/排序 51 项，语言 32 项。
+- 更新逻辑与双语配色：75 项；更新窗口交互：34 项。
+- 三种模式启动：各 5 项；发布依赖清单核对：5 项。
+
+以上为本地验证范围，不代表所有硬件与系统组合均经过实测。新增内存传感器显示使用合成数据验证；本轮未重新进行真实全屏游戏测试。传感器依赖和功能运行库保留，仅精简不提供的其他界面语言资源。
+
+The accepted Windows candidate passed the checks above. These are local checks, not certification of every hardware/OS combination. DIMM display cases used synthetic readings; this round did not repeat fullscreen-game testing. Sensor dependencies and functional runtimes are retained.
+
+---
 # 验证范围 / Validation scope
 
 ## Windows 1.5.2

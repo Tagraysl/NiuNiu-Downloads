@@ -80,4 +80,4 @@
 - 进程读写包含文件、网络和设备 I/O；网络流量通过 ETW 统计，代理流量可能记在代理进程上，不宜简单相加。只统计字节与进程身份，不记录通信内容。
 - 设置与监控在本机处理。启用公网查询会访问 Ping0，延迟检测访问指定目标，更新检查访问 GitHub；相应自动请求可在设置中关闭。
 
-[应用源码](https://github.com/Tagraysl/NiuNiu)（公开可查看，授权以许可证为准） · [使用许可](LICENSE) · [第三方声明](THIRD-PARTY-NOTICES.md) · [验证范围](docs/VALIDATION.md) · [更新记录](CHANGELOG.zh-CN.md)
+[使用许可](LICENSE) · [第三方声明](THIRD-PARTY-NOTICES.md) · [验证范围](docs/VALIDATION.md) · [更新记录](CHANGELOG.zh-CN.md)

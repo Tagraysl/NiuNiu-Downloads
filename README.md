@@ -46,6 +46,6 @@
 
 温度与传感器项目取决于硬件及驱动。监控程序请求管理员权限，部分传感器需要 PawnIO；安装包目前未取得发布者签名。
 
-当前版本可免费用于个人及组织内部。此仓库提供安装包与说明。[应用源码现已公开可查看](https://github.com/Tagraysl/NiuNiu)，具体使用与修改权限以许可证为准。详见 [使用许可](LICENSE)、[第三方声明](THIRD-PARTY-NOTICES.md)。
+当前版本可免费用于个人及组织内部。此仓库提供安装包与说明，牛牛核心源码不公开。详见 [使用许可](LICENSE)、[第三方声明](THIRD-PARTY-NOTICES.md)。
 
 [更新记录](CHANGELOG.zh-CN.md) · [验证范围](docs/VALIDATION.md) · [反馈建议](https://github.com/Tagraysl/NiuNiu-Downloads/issues)

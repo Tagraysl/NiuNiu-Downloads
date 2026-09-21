@@ -71,4 +71,4 @@ Enable **Start with Windows** in General settings and save. The next sign-in res
 - Process I/O includes file, network and device I/O. ETW network accounting can attribute forwarded traffic to proxy processes; do not simply add all processes. Packet contents are not recorded.
 - Settings and monitoring are handled locally. Enabled public-IP queries contact Ping0, latency checks contact the selected host, and update checks contact GitHub. Automatic queries/checks can be disabled.
 
-Free for personal and internal organizational use under the [license](LICENSE). Core source is private. [Third-party notices](THIRD-PARTY-NOTICES.md) · [Validation](docs/VALIDATION.md) · [Changelog](CHANGELOG.zh-CN.md)
+Free for personal and internal organizational use under the [license](LICENSE). [Application source is publicly viewable](https://github.com/Tagraysl/NiuNiu); the existing license still governs use and modification. [Third-party notices](THIRD-PARTY-NOTICES.md) · [Validation](docs/VALIDATION.md) · [Changelog](CHANGELOG.zh-CN.md)

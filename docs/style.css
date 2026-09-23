@@ -19,3 +19,4 @@
 .quick-start li+li{margin-top:9px}
 @media(max-width:900px){.capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.custom-grid{gap:20px}}
 @media(max-width:640px){.capabilities,.personalize{padding-block:5px 40px}.capability-grid,.custom-grid{grid-template-columns:1fr}.capability-grid article{padding:22px}.custom-grid{gap:24px}.quick-start{padding:18px}.capabilities h2,.personalize h2{font-size:28px;line-height:1.4}}
+.analytics-preferences{padding-block:0 30px}.analytics-preferences summary{cursor:pointer;font-size:14px}.analytics-preferences p{max-width:850px;font-size:14px;line-height:1.8;color:var(--muted)}.analytics-preferences button{padding:10px 16px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);font:inherit;cursor:pointer}.analytics-preferences button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}

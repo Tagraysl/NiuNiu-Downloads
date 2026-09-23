@@ -72,3 +72,8 @@ No Mac was available. Cross-compilation and package checks do not establish that
 - Release assets include SHA-256 manifests. Compare the downloaded file's SHA-256 with the corresponding manifest to detect corruption or mismatch.
 - 发行包附 SHA-256 清单，可核对下载内容的一致性。
 
+
+
+## 1.5.8 发布范围（2026-09-24）
+
+Windows 编译与打包完成。此前候选的 192 项检查通过；最终紧凑布局复原、悬停提示及卸载流程未完成真实交互复测，Clash 实际打开仍待人工确认。192 项不代表最终变更全部经过复测。性能优化未提供量化基准。NuGet 漏洞信息查询出现 NU1900 网络警告，依赖版本未改变。没有发布 macOS 安装包。

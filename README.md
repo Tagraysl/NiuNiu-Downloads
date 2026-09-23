@@ -4,7 +4,7 @@
 <p>查找高占用程序，查看硬件负载与温度，把关注的指标留在桌面或任务栏。</p>
 <p>A Windows monitor for hardware readings, busy processes and a desktop that fits your workflow.</p>
 
-<a href="https://github.com/Tagraysl/NiuNiu-Downloads/releases/download/v1.5.6/NiuNiu-1.5.6-Windows-x64-Setup.exe">下载 Windows 1.5.6</a> · <a href="https://tagraysl.github.io/NiuNiu-Downloads/">官网与交互演示</a> · <a href="README.zh-CN.md">详细中文说明</a> · <a href="README.en.md">English guide</a>
+<a href="https://github.com/Tagraysl/NiuNiu-Downloads/releases/download/v1.5.8/NiuNiu-1.5.8-Windows-x64-Setup.exe">下载 Windows 1.5.8</a> · <a href="https://tagraysl.github.io/NiuNiu-Downloads/">官网与交互演示</a> · <a href="README.zh-CN.md">详细中文说明</a> · <a href="README.en.md">English guide</a>
 </div>
 
 ## 可以用来做什么？
@@ -17,11 +17,11 @@
 | 只想看自己关心的信息？ | 自选参数和曲线、DIY 分组、自定义行、模块宽度、字体和配色 |
 | 想及时留意温度变化？ | 自定义温度阈值、超温变红、可选 Windows 通知 |
 
-## 1.5.6 更新
+## 1.5.8 更新
 
-完整模式的参数会根据实际可用宽度自动排成多列，统一放在图表上方。同一行卡片的图表对齐，长内容按需滚动。参数和曲线分区设置，支持参数排序和恢复推荐。
+新增应用/进程两种占用视图，以及“应用设置”预览。改进字体、模块设置排列和任务栏设置配色；卸载时可选择保留或删除个人数据。
 
-同时优化控件复用与布局开销；安装包约 **52.0 MB**，保留传感器依赖及功能运行库。
+减少部分重复计算和临时对象创建；安装包约 **52.0 MB**，保留传感器依赖及功能运行库。
 
 ## 下载与使用
 

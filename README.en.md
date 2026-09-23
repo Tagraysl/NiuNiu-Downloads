@@ -1,4 +1,4 @@
-# NiuNiu 1.5.6 · User guide
+# NiuNiu 1.5.8 · User guide
 
 [Download for Windows](https://github.com/Tagraysl/NiuNiu-Downloads/releases/latest) · [Interactive website](https://tagraysl.github.io/NiuNiu-Downloads/) · [中文](README.zh-CN.md)
 
@@ -37,7 +37,7 @@ Display choices are saved separately per mode. Module sampling intervals and wid
 
 Identify processes by icon, name and PID. Search by name/PID; sort by name, CPU, GPU, memory, I/O, network traffic or estimated energy impact in either direction.
 
-Each row represents a process, so one application can appear several times. **Open** targets that process's window or executable rather than searching for a different main process. **Close** ends the selected process, not its entire tree, and can lose unsaved work. Critical system processes and NiuNiu itself are protected.
+In process view, each row represents one process, so an application can appear several times. **Open** attempts to show the selected process's window. **Close** ends the selected process, not its entire tree, and can lose unsaved work. Critical system processes and NiuNiu itself are protected.
 
 Energy impact has five levels: very low, low, medium, high and very high. It is an estimate from resource activity, not measured watts.
 
@@ -59,7 +59,7 @@ Advanced Ping0 information requires your own API key, encrypted for the current 
 
 ## Install and update
 
-Windows 10/11 x64; the installer includes the .NET runtime. Choose installation and data folders. Reuse them when upgrading to preserve settings; uninstalling keeps personal data. Monitoring requests administrator privileges. Some sensors require [PawnIO](https://pawnio.eu/); the installer does not install that driver automatically. The package currently has no publisher signature. This release is Windows-only.
+Windows 10/11 x64; the installer includes the .NET runtime. Choose installation and data folders. Reuse them when upgrading to preserve settings; uninstalling keeps personal data by default, with an option to delete NiuNiu settings, keys and logs. PawnIO is kept separately. Monitoring requests administrator privileges. Some sensors require [PawnIO](https://pawnio.eu/); the installer does not install that driver automatically. The package currently has no publisher signature. This release is Windows-only.
 
 Enable **Start with Windows** in General settings and save. The next sign-in restores the last display mode. The in-app updater checks official Windows releases on GitHub, downloads and verifies the installer, then runs it after confirmation. Optional automatic checks run at most once every six hours. Older versions without the updater need one manual upgrade.
 
@@ -72,3 +72,9 @@ Enable **Start with Windows** in General settings and save. The next sign-in res
 - Settings and monitoring are handled locally. Enabled public-IP queries contact Ping0, latency checks contact the selected host, and update checks contact GitHub. Automatic queries/checks can be disabled.
 
 Free for personal and internal organizational use under the [license](LICENSE). Core source is private. [Third-party notices](THIRD-PARTY-NOTICES.md) · [Validation](docs/VALIDATION.md) · [Changelog](CHANGELOG.zh-CN.md)
+
+## Application view and settings previews
+
+Switch between grouped applications and individual processes. Application Close requests a normal window close; process Close terminates only the selected process. Background processes remain available in process view. Application GPU is the highest member value.
+
+Apply settings previews changes; Save keeps them and Cancel rolls them back. Font weight is configurable per mode.

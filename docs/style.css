@@ -56,3 +56,24 @@
 @media(max-width:640px){.derivative-card{display:block;padding:22px}.derivative-actions{margin-top:20px;text-align:left;justify-items:start}.demo-layout-tools{padding:10px 12px;flex-wrap:wrap}.demo-dialog{padding:20px}}
 
 .nav nav>a[href="#derivatives"]{display:inline;color:var(--blue);font-weight:600}.edition-choice{color:var(--blue)}.derivatives{scroll-margin-top:24px}.derivatives .section-head{margin-bottom:18px}
+
+/* Responsive demo window and independent resize handles. */
+.demo-app.resizable-demo{display:flex;flex-direction:column;min-width:0;min-height:250px;transition:background .25s;overflow:hidden;padding-bottom:20px}
+.resizable-demo .app-title,.resizable-demo .app-tabs,.resizable-demo .app-status{flex:none}
+.resizable-demo #hardware-panel,.resizable-demo #process-panel{flex:1;min-height:0;overflow:auto;align-content:start;scrollbar-gutter:stable}
+.resizable-demo .metric-grid{grid-auto-flow:row;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr))}
+.resizable-demo .metric{align-self:stretch}.resizable-demo .metric-parameters{display:flex;flex-wrap:wrap;gap:6px 12px;min-height:64px;align-content:start}
+.resizable-demo .metric-detail{flex:1 1 145px;min-width:0;max-width:100%;display:block}
+.resizable-demo .metric-detail>span{display:inline-block;white-space:nowrap;vertical-align:top}
+.rolling-detail>span{animation:demo-roll 8s ease-in-out infinite alternate}
+@keyframes demo-roll{0%,20%{transform:translateX(0)}80%,100%{transform:translateX(var(--roll-distance))}}
+.demo-stage[data-mode=compact] .resizable-demo .metric-parameters{min-height:0;grid-column:1/-1}
+.demo-resize{position:absolute;border:0;background:transparent;padding:0;z-index:3;font-size:0;color:transparent;touch-action:none;user-select:none}
+.demo-resize-e{right:0;top:40px;bottom:18px;width:9px;cursor:ew-resize}.demo-resize-s{left:18px;right:18px;bottom:0;height:9px;cursor:ns-resize}.demo-resize-se{right:0;bottom:0;width:22px;height:22px;cursor:nwse-resize;background:repeating-linear-gradient(135deg,transparent 0 4px,var(--sub) 4px 5px);clip-path:polygon(100% 0,100% 100%,0 100%)}
+.demo-resize:focus-visible{outline-offset:-3px;background-color:#357dee33}.is-resizing{user-select:none}
+.demo-task-controls{border-inline:1px solid var(--line);background:white;padding:12px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12px}
+.demo-task-controls button{border:1px solid var(--line);background:#eff2f6;color:var(--ink);padding:6px 10px;border-radius:8px}.demo-task-controls label{display:flex;align-items:center;gap:6px}.demo-task-controls>span:last-child{color:var(--muted);font-size:11px}.task-page{font-variant-numeric:tabular-nums;min-width:30px}
+.task-reading{min-width:0}.task-extra b{font-size:10px}.task-widget{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.rolling-detail>span{animation:none}}
+
+.resizable-demo .metric-label b{flex-shrink:0;white-space:nowrap}.resizable-demo .metric-menu{flex-shrink:0;min-width:24px}.resizable-demo .metric-label{min-width:0}.resizable-demo .metric-value{white-space:nowrap}.rolling-detail{ text-overflow:clip}.demo-motion-paused .rolling-detail>span{animation-play-state:paused}.demo-width-value{min-width:45px;font-variant-numeric:tabular-nums;color:var(--muted)}

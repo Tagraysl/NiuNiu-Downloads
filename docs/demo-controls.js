@@ -25,7 +25,7 @@
   function apply(){
     [...panel.children].forEach((card,i)=>{
       const s=settings[mode()][i];if(!s)return;
-      card.style.gridColumn=mode()==='full'&&s.width>1?'1 / -1':'';
+      card.style.gridColumn=mode()==='full'?`span ${Math.min(s.width,Number(panel.dataset.columns)||1)}`:'';
       card.querySelector('.metric-value').hidden=!s.main;
       card.querySelector('.metric-bar').hidden=!s.main;
       card.querySelectorAll('.metric-detail').forEach((el,n)=>el.hidden=!s.parameters[n]);
@@ -58,7 +58,7 @@
     const note=document.createElement('p');note.textContent=tr('网页示例 · 应用预览，保存后关闭；取消恢复原设置。','Web demo · Apply to preview, save to close, or cancel to restore.');dialog.append(note);
     const width=document.createElement('label');width.textContent=tr('模块宽度 ','Module width ');
     const select=document.createElement('select');select.name='width';
-    [tr('标准','Standard'),tr('铺满当前行','Fill current row')].forEach((text,n)=>{const o=document.createElement('option');o.value=n+1;o.textContent=text;select.append(o)});
+    [1,2,3,4].map(n=>n+tr(' 格',' columns')).forEach((text,n)=>{const o=document.createElement('option');o.value=n+1;o.textContent=text;select.append(o)});
     select.value=s.width;select.disabled=editingMode==='compact';width.append(select);dialog.append(width);
     function check(name,text,value){const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.name=name;input.checked=value;label.append(input,document.createTextNode(' '+text));dialog.append(label)}
     check('main',tr('显示大号主指标','Show primary reading'),s.main);
@@ -74,6 +74,6 @@
   dialog.addEventListener('close',()=>{if(baseline){settings[editingMode][editing]=baseline;$('#threshold').value=thresholdBefore;$('#threshold').dispatchEvent(new Event('input'));apply()}baseline=null});
   dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
   $('.task-widget').addEventListener('dblclick',()=>document.querySelector('button[data-mode=full]').click());
-  document.addEventListener('niuniu-demo-render',apply);
+  document.addEventListener('niuniu-demo-render',apply);document.addEventListener('niuniu-demo-layout',apply);
   apply();
 })();

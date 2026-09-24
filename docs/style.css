@@ -21,3 +21,32 @@
 @media(max-width:640px){.capabilities,.personalize{padding-block:5px 40px}.capability-grid,.custom-grid{grid-template-columns:1fr}.capability-grid article{padding:22px}.custom-grid{gap:24px}.quick-start{padding:18px}.capabilities h2,.personalize h2{font-size:28px;line-height:1.4}}
 .analytics-preferences{padding-block:0 30px}.analytics-preferences summary{cursor:pointer;font-size:14px}.analytics-preferences p{max-width:850px;font-size:14px;line-height:1.8;color:var(--muted)}.analytics-preferences button{padding:10px 16px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);font:inherit;cursor:pointer}.analytics-preferences button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .driver-help{display:flex;align-items:center;gap:32px;margin-top:24px;padding:24px 28px;border:1px solid var(--line);border-radius:18px;background:white}.driver-help>div{flex:1;min-width:0}.driver-help h3{margin:0 0 10px;font-size:18px}.driver-help p{margin:8px 0 0;font-size:14px;line-height:1.8;color:var(--muted)}.driver-link{flex-shrink:0;border:1px solid var(--line);padding:12px 16px;border-radius:10px;color:var(--blue);font-size:14px}.driver-link:focus-visible{outline:2px solid var(--blue);outline-offset:3px}@media(max-width:640px){.driver-help{display:block;padding:22px}.driver-link{display:inline-block;margin-top:18px}}
+
+/* Keep taskbar chrome out of the draggable metric layout. */
+.demo-taskbar{display:grid;grid-template-columns:28px minmax(0,1fr) 42px;gap:16px;height:48px;padding:0 16px;white-space:nowrap}
+.start-mark,.clock{flex-shrink:0;white-space:nowrap}.clock{margin:0;text-align:right}
+.task-track{position:relative;min-width:0;height:100%;overflow:hidden}
+.task-apps{position:absolute;inset:0 auto 0 0;display:flex;align-items:center;gap:20px;letter-spacing:0;white-space:nowrap}
+.task-widget{position:absolute;top:0;left:0;width:224px;max-width:100%;height:100%;margin:0;padding:4px 6px;gap:12px;border:0;border-radius:0;background:transparent;align-items:center;justify-content:flex-start;font-family:"Microsoft YaHei UI","Segoe UI",sans-serif;font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.task-reading{display:grid;grid-template-rows:18px 18px;flex:0 0 auto;gap:0;line-height:18px;color:#172634}
+.task-widget b{font-weight:500}.task-widget i{margin:0;color:#172634;font-style:normal}
+.task-widget:hover{background:#e5edf680}.task-widget:focus-visible{outline-offset:-3px}
+.demo-stage[data-mode=taskbar] .task-apps{visibility:hidden}
+.demo-stage[data-mode=taskbar]:after{bottom:48px;padding:24px;text-align:center}
+.metric-label>span:not(.metric-menu){overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1}
+.metric-menu{flex:none;font-size:15px;color:var(--sub)}
+.metric-label b{border-color:var(--text)}
+.metric-bar{height:3px;background:var(--border);margin:0 0 10px}.metric-bar>span{display:block;height:100%}.network-bar{background:transparent}
+.metric-parameters{display:grid;gap:6px}.metric-detail{line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chart-label{margin-top:10px;font-size:9px;color:var(--sub)}
+.spark{margin-top:4px}.spark .chart-grid{stroke:var(--border);stroke-width:.6}
+.demo-stage[data-mode=compact] .metric-grid{grid-template-columns:1fr}
+.demo-stage[data-mode=compact] .metric{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:8px;row-gap:4px;padding:9px 11px}
+.demo-stage[data-mode=compact] .metric-label{justify-content:flex-start;min-width:0}
+.demo-stage[data-mode=compact] .metric-label>span{display:block}
+.demo-stage[data-mode=compact] .metric-value{font-size:20px;margin:0;white-space:nowrap}
+.demo-stage[data-mode=compact] .metric-bar{grid-column:1/-1;margin:0}
+.demo-stage[data-mode=compact] .metric-parameters{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px 8px}
+.demo-stage[data-mode=compact] .metric-detail:last-child{grid-column:1/-1}
+.demo-stage[data-mode=compact] .spark,.demo-stage[data-mode=compact] .chart-label{display:none}
+@media(max-width:640px){.demo-taskbar{padding:0 8px;gap:8px;grid-template-columns:24px minmax(0,1fr) 34px}.task-widget{font-size:10px;width:192px;gap:8px;padding-inline:2px}.task-reading{line-height:17px;grid-template-rows:17px 17px}.task-apps{gap:12px}}

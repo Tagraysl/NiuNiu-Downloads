@@ -1,4 +1,4 @@
-# NiuNiu 1.5.8 · User guide
+# NiuNiu 1.5.9 · User guide
 
 [Download for Windows](https://github.com/Tagraysl/NiuNiu-Downloads/releases/latest) · [Interactive website](https://tagraysl.github.io/NiuNiu-Downloads/) · [中文](README.zh-CN.md)
 

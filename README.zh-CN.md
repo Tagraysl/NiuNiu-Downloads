@@ -1,4 +1,4 @@
-# 牛牛 1.5.8 · 使用指南
+# 牛牛 1.5.9 · 使用指南
 
 [下载 Windows 版](https://github.com/Tagraysl/NiuNiu-Downloads/releases/latest) · [官网交互演示](https://tagraysl.github.io/NiuNiu-Downloads/) · [English](README.en.md)
 
